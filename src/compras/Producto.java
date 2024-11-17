@@ -1,31 +1,32 @@
+
 package compras;
 
 public class Producto {
     
-    ** final int codigo;
-    ** String nombre;
-    ** String tipo;
-    ** static int totalProductosPedidos;
+    private final int codigo; //No se usa fuera de la clase
+    private String nombre; //No se usa fuera de la clase
+    public String tipo;  //Necesito ser accedido en otra clase de otro paquete
+    static int totalProductosPedidos; //Atributo de clase
 
-    ** Producto(int codigo, String nombre, String tipo) {
+    public Producto(int codigo, String nombre, String tipo) { //Necesito ser accedido en otra clase de otro paquete
         this.codigo = codigo;
         this.nombre = nombre;
         this.tipo = tipo;
     }
 
-    ** void imprimirNombre() {
+    void imprimirNombre() { //Default para ser conocido en todo el paquete
         System.out.print(nombre);
     }
 
     public void setCodigo(int codigo) {
-        **
+        return; //pass
     }
 
-    public ** getCodigo() {
+    public int getCodigo() { //Codigo es de tipo entero
         return codigo;
     }
 
-    ** static int getTotalProductosPedidos() {
+    public static int getTotalProductosPedidos() { //Se necesita accederlo en otra clase de otro paquete
         return totalProductosPedidos;
     }
 }

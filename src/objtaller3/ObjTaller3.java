@@ -1,12 +1,13 @@
+
 package objtaller3;
 
-import compras.**;
-import gestionHumana.Empleado;
-import **;
+import compras.*; //Importa todas las clases publicas del paquete compras
+import gestionHumana.*; 
+import java.util.ArrayList; //Permite hacer y manipular Arrays
 
 public class ObjTaller3 {
 
-    public static void main(** args) {
+    public static void main(String[] args) { //Metodo main
         Producto p1 = new Producto(1, "Escoba", "Aseo");
         Producto p2 = new Producto(2, "Camisa", "Ropa");
         Producto p3 = new Producto(3, "Trapera", "Aseo");
@@ -16,11 +17,11 @@ public class ObjTaller3 {
         ArrayList<Producto> productos1 = new ArrayList<>();
         productos1.add(p1);
         productos1.add(p3);
-        OrdenCompra orden1 = new OrdenCompra(**, "Aseo", emp1, productos1);
+        OrdenCompra orden1 = new OrdenCompra(101, "Aseo", emp1, productos1); //Se necesita agregar el codigo de la orden
         System.out.println(Producto.getTotalProductosPedidos());
         orden1.agregarProducto(p4);
         System.out.println(Producto.getTotalProductosPedidos());
-        orden1.**(p5);
+        orden1.agregarProducto(p5); //Se agrega al Array de productos
         System.out.println(Producto.getTotalProductosPedidos());
         System.out.println("Orden " + orden1.codigo + " creada");
 
@@ -33,7 +34,7 @@ public class ObjTaller3 {
         System.out.println(emp2.cedula + " va a retirar producto");
         orden2.retirarProducto(emp2, p4);
         System.out.println(Producto.getTotalProductosPedidos());
-        orden2.retirarProducto(**, p2);
+        orden2.retirarProducto(emp1, p2); //Se necesita un empleado para retirar producto
         System.out.println(Producto.getTotalProductosPedidos());
     }
 }
