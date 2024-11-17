@@ -5,7 +5,7 @@ public class Producto {
     
     private final int codigo; //No se usa fuera de la clase
     private String nombre; //No se usa fuera de la clase
-    public String tipo;  //Necesito ser accedido en otra clase de otro paquete
+    String tipo;  //Necesito ser accedido en otra clase del mismo paquete
     static int totalProductosPedidos; //Atributo de clase
 
     public Producto(int codigo, String nombre, String tipo) { //Necesito ser accedido en otra clase de otro paquete

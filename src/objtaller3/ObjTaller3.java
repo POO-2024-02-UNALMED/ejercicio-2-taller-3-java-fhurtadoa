@@ -2,7 +2,7 @@
 package objtaller3;
 
 import compras.*; //Importa todas las clases publicas del paquete compras
-import gestionHumana.*; 
+import gestionHumana.Empleado; 
 import java.util.ArrayList; //Permite hacer y manipular Arrays
 
 public class ObjTaller3 {
@@ -34,7 +34,7 @@ public class ObjTaller3 {
         System.out.println(emp2.cedula + " va a retirar producto");
         orden2.retirarProducto(emp2, p4);
         System.out.println(Producto.getTotalProductosPedidos());
-        orden2.retirarProducto(emp1, p2); //Se necesita un empleado para retirar producto
+        orden2.retirarProducto(emp1, p2); //Se necesita un empleado para retirar producto, pero emp1 no lo puede retirar
         System.out.println(Producto.getTotalProductosPedidos());
     }
 }

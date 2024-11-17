@@ -1,7 +1,7 @@
 
 package compras;
 
-import gestionHumana.Empleado; //
+import gestionHumana.Empleado; 
 import java.util.ArrayList;
 
 
